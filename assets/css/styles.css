@@ -3,6 +3,17 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
+@media (max-width: 767px) {
+    html {
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
+    html::-webkit-scrollbar {
+        display: none;
+    }
+}
+
 .bg-hero-pattern {
     background-color: #0B192C;
     background-image: linear-gradient(rgba(11, 25, 44, 0.85), rgba(11, 25, 44, 0.95)), url('https://images.unsplash.com/photo-1579532537598-459ecdaf39cc?q=80&w=2070&auto=format&fit=crop');
