@@ -62,6 +62,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const emailError = document.getElementById('email-error');
     const messageError = document.getElementById('message-error');
     const formSuccess = document.getElementById('form-success');
+    const formError = document.getElementById('form-error');
+    const MAIL_ENDPOINT = 'https://formsubmit.co/ajax/connect.medhawealth@gmail.com';
     const submitBtn = document.getElementById('submit-btn');
 
     // Simple email regex
@@ -105,29 +107,46 @@ document.addEventListener('DOMContentLoaded', () => {
             isValid = false;
         }
 
-        // Submission Mock Process
         if (isValid) {
-            // Visual feedback during 'sending'
             const originalBtnText = submitBtn.innerHTML;
-            submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Processing...';
+            submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
             submitBtn.disabled = true;
             submitBtn.classList.add('opacity-75', 'cursor-not-allowed');
+            formError.classList.add('hidden');
 
-            // Simulate API Call delay
-            setTimeout(() => {
-                formSuccess.classList.remove('hidden');
-                contactForm.reset();
+            const phoneValue = document.getElementById('phone').value.trim();
 
-                // Restore button state
-                submitBtn.innerHTML = originalBtnText;
-                submitBtn.disabled = false;
-                submitBtn.classList.remove('opacity-75', 'cursor-not-allowed');
-
-                // Hide success message after 5 seconds
-                setTimeout(() => {
-                    formSuccess.classList.add('hidden');
-                }, 5000);
-            }, 1200);
+            fetch(MAIL_ENDPOINT, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                body: JSON.stringify({
+                    _subject: 'Help Requested Through Medha Wealth',
+                    _template: 'table',
+                    _captcha: 'false',
+                    'Full Name': nameInput.value.trim(),
+                    'Email Address': emailInput.value.trim(),
+                    'Phone Number': phoneValue || 'Not provided',
+                    'How can we help you?': messageInput.value.trim()
+                })
+            })
+                .then(response => {
+                    if (!response.ok) throw new Error('Request failed');
+                    return response.json();
+                })
+                .then(data => {
+                    if (data.success === 'false' || data.success === false) throw new Error('Request rejected');
+                    formSuccess.classList.remove('hidden');
+                    contactForm.reset();
+                    setTimeout(() => formSuccess.classList.add('hidden'), 5000);
+                })
+                .catch(() => {
+                    formError.classList.remove('hidden');
+                })
+                .finally(() => {
+                    submitBtn.innerHTML = originalBtnText;
+                    submitBtn.disabled = false;
+                    submitBtn.classList.remove('opacity-75', 'cursor-not-allowed');
+                });
         }
     });
 
