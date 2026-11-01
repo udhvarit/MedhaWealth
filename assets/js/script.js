@@ -2,6 +2,16 @@ document.addEventListener('DOMContentLoaded', () => {
     // Set current year in footer
     document.getElementById('year').textContent = new Date().getFullYear();
 
+    // Disclaimer popup
+    document.getElementById('disclaimer-close').addEventListener('click', () => {
+        document.getElementById('disclaimer').classList.add('hidden');
+    });
+
+    document.getElementById('disclaimer-link').addEventListener('click', (e) => {
+        e.preventDefault();
+        document.getElementById('disclaimer').classList.remove('hidden');
+    });
+
     // Mobile Menu Toggle
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');

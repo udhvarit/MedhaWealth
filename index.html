@@ -21,6 +21,25 @@
 </head>
 <body class="bg-brand-light text-gray-800 flex flex-col min-h-screen">
 
+    <!-- Disclaimer Popup -->
+    <aside id="disclaimer" role="dialog" aria-labelledby="disclaimer-title" class="fixed top-24 right-4 z-[60] w-[calc(100%-2rem)] sm:w-96 max-h-[70vh] overflow-y-auto bg-white border border-gray-200 border-t-4 border-t-brand-gold rounded-sm shadow-2xl p-5">
+        <div class="flex items-start justify-between gap-4 mb-3">
+            <h2 id="disclaimer-title" class="text-lg font-bold text-brand-navy">Disclaimer</h2>
+            <button id="disclaimer-close" type="button" aria-label="Close disclaimer" class="text-gray-400 hover:text-brand-navy transition-colors">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+        </div>
+        <div class="space-y-3 text-xs text-gray-600 leading-relaxed">
+            <p>The information available on this website is provided solely for informational and educational purposes.</p>
+            <p>Nothing contained on this website constitutes investment advice, legal advice, tax advice, or an offer to buy or sell any financial product.</p>
+            <p>Investment decisions should always be based on your individual financial objectives, risk profile, and consultation with a qualified financial advisor.</p>
+            <p class="font-bold text-brand-navy">Mutual fund investments are subject to market risks. Please read all scheme-related documents carefully before investing.</p>
+            <p>Past performance of any mutual fund or investment strategy does not guarantee future returns.</p>
+            <p>While every effort is made to ensure the accuracy of the information presented, Medha Wealth makes no warranties regarding its completeness or accuracy and shall not be liable for any loss arising from reliance on the information available on this website.</p>
+            <p>The website may contain links to external websites. We do not endorse or take responsibility for their content or privacy practices.</p>
+        </div>
+    </aside>
+
     <!-- Navigation -->
     <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100 shadow-sm transition-all duration-300" id="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -158,11 +177,15 @@
                         <ul class="space-y-3 text-sm text-gray-600">
                             <li class="flex items-start gap-3">
                                 <i class="fa-solid fa-id-card text-brand-gold mt-1"></i>
-                                <span><span class="font-semibold text-brand-navy">ARN-188655</span> &middot; Registered since 23 October 2021</span>
+                                <span><span class="font-semibold text-brand-navy">ARN-188655</span> &middot; Registered since 23 October 2021<br>Valid until 6 October 2027</span>
                             </li>
                             <li class="flex items-start gap-3">
                                 <i class="fa-solid fa-shield-heart text-brand-gold mt-1"></i>
                                 <span><span class="font-semibold text-brand-navy">Life Insurance Advisor</span> &ndash; ICICI Prudential Life Insurance<br>Advisor Code: ICI01682125</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-heart-pulse text-brand-gold mt-1"></i>
+                                <span><span class="font-semibold text-brand-navy">Health Insurance Advisor</span> &ndash; Star Health and Allied Insurance<br>Advisor Code: BA0000469817 &middot; Since 22 January 2020</span>
                             </li>
                         </ul>
                     </article>
@@ -429,7 +452,7 @@
                                 <label for="name" class="block text-sm font-medium text-gray-700">Full Name <span class="text-red-500">*</span></label>
                                 <input type="text" id="name" name="name" required
                                     class="form-input w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-sm text-gray-800"
-                                    placeholder="John Doe">
+                                    placeholder="First Name                Last Name">
                                 <p id="name-error" class="hidden text-red-500 text-xs mt-1">Please enter your name.</p>
                             </div>
                             
@@ -438,17 +461,17 @@
                                 <label for="email" class="block text-sm font-medium text-gray-700">Email Address <span class="text-red-500">*</span></label>
                                 <input type="email" id="email" name="email" required
                                     class="form-input w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-sm text-gray-800"
-                                    placeholder="john@example.com">
+                                    placeholder="abc@example.com">
                                 <p id="email-error" class="hidden text-red-500 text-xs mt-1">Please enter a valid email address.</p>
                             </div>
                         </div>
 
                         <!-- Phone (Optional) -->
                         <div class="space-y-2">
-                            <label for="phone" class="block text-sm font-medium text-gray-700">Phone Number (Optional)</label>
+                            <label for="phone" class="block text-sm font-medium text-gray-700">Phone Number</label>
                             <input type="tel" id="phone" name="phone"
                                 class="form-input w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-sm text-gray-800"
-                                placeholder="+1 (555) 000-0000">
+                                placeholder="+91 **********">
                         </div>
 
                         <!-- Message -->
@@ -491,9 +514,6 @@
                         <a href="https://www.linkedin.com/in/yogesh-jawale-2296003/" target="_blank" rel="noopener noreferrer" aria-label="Yogesh Jawale on LinkedIn" class="w-8 h-8 rounded-full bg-brand-slate flex items-center justify-center text-gray-400 hover:bg-brand-gold hover:text-white transition-all duration-300">
                             <i class="fa-brands fa-linkedin-in text-sm"></i>
                         </a>
-                        <a href="#" class="w-8 h-8 rounded-full bg-brand-slate flex items-center justify-center text-gray-400 hover:bg-brand-gold hover:text-white transition-all duration-300">
-                            <i class="fa-brands fa-twitter text-sm"></i>
-                        </a>
                     </div>
                 </div>
 
@@ -522,10 +542,9 @@
                 <div>
                     <h4 class="text-lg font-bold mb-6">Legal</h4>
                     <ul class="space-y-3">
-                        <li><a href="#" class="text-gray-400 hover:text-brand-gold transition-colors text-sm">Privacy Policy</a></li>
+                        <li><a href="#" id="disclaimer-link" class="text-gray-400 hover:text-brand-gold transition-colors text-sm">Disclaimer</a></li>
                         <li><a href="#" class="text-gray-400 hover:text-brand-gold transition-colors text-sm">Terms of Service</a></li>
                         <li><a href="#" class="text-gray-400 hover:text-brand-gold transition-colors text-sm">Regulatory Disclosures</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-brand-gold transition-colors text-sm">Client Portal Help</a></li>
                     </ul>
                 </div>
             </div>
