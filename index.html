@@ -1,0 +1,490 @@
+    <!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medha Wealth | Empowering Your Financial Future</title>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="assets/js/tailwind.config.js"></script>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="bg-brand-light text-gray-800 flex flex-col min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100 shadow-sm transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#" class="flex items-center gap-2">
+                        <div class="w-8 h-8 bg-brand-navy flex items-center justify-center rounded-sm">
+                            <span class="text-brand-gold font-bold text-xl leading-none">M</span>
+                        </div>
+                        <span class="font-bold text-2xl tracking-tight text-brand-navy">Medha Wealth</span>
+                    </a>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#home" class="text-gray-600 hover:text-brand-gold font-medium transition-colors duration-200">Home</a>
+                    <a href="#about" class="text-gray-600 hover:text-brand-gold font-medium transition-colors duration-200">About</a>
+                    <a href="#services" class="text-gray-600 hover:text-brand-gold font-medium transition-colors duration-200">Services</a>
+                    <a href="#why-us" class="text-gray-600 hover:text-brand-gold font-medium transition-colors duration-200">Why Us</a>
+                    <a href="#contact" class="bg-brand-navy hover:bg-brand-slate text-white px-5 py-2.5 rounded-sm font-medium transition-colors duration-300 flex items-center gap-2">
+                        Contact Us <i class="fa-solid fa-arrow-right text-sm"></i>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-brand-navy hover:text-brand-gold focus:outline-none p-2">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg">
+            <div class="px-4 pt-2 pb-6 space-y-1 flex flex-col">
+                <a href="#home" class="mobile-link block px-3 py-3 text-base font-medium text-gray-700 hover:text-brand-gold hover:bg-gray-50 rounded-md">Home</a>
+                <a href="#about" class="mobile-link block px-3 py-3 text-base font-medium text-gray-700 hover:text-brand-gold hover:bg-gray-50 rounded-md">About</a>
+                <a href="#services" class="mobile-link block px-3 py-3 text-base font-medium text-gray-700 hover:text-brand-gold hover:bg-gray-50 rounded-md">Services</a>
+                <a href="#why-us" class="mobile-link block px-3 py-3 text-base font-medium text-gray-700 hover:text-brand-gold hover:bg-gray-50 rounded-md">Why Us</a>
+                <a href="#contact" class="mobile-link block px-3 py-3 mt-2 text-base font-medium text-center text-white bg-brand-navy rounded-sm">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="bg-hero-pattern hero-section relative flex items-center pt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full py-20">
+            <div class="max-w-3xl">
+                <div class="inline-block px-4 py-1.5 rounded-full border border-brand-gold/30 bg-brand-gold/10 text-brand-gold font-medium text-sm mb-6 tracking-wide uppercase">
+                    Trusted Wealth Management
+                </div>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+                    Empowering Your <br/>
+                    <span class="text-brand-gold">Financial Future</span>
+                </h1>
+                <p class="text-lg sm:text-xl text-gray-300 mb-10 max-w-2xl leading-relaxed">
+                    We provide bespoke financial strategies, rigorous market analysis, and steadfast corporate advisory to help you build, manage, and protect your wealth across generations.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#services" class="px-8 py-4 bg-brand-gold hover:bg-brand-goldHover text-brand-navy font-semibold rounded-sm transition-all duration-300 text-center text-lg">
+                        Explore Our Services
+                    </a>
+                    <a href="#contact" class="px-8 py-4 bg-transparent border border-white hover:border-brand-gold hover:text-brand-gold text-white font-semibold rounded-sm transition-all duration-300 text-center text-lg">
+                        Schedule a Consultation
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 relative overflow-hidden bg-white">
+        <div class="absolute top-0 right-0 w-1/2 h-full bg-about-pattern pointer-events-none"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <!-- Image/Visual -->
+                <div class="relative group">
+                    <div class="absolute inset-0 bg-brand-gold rounded-sm transform translate-x-4 translate-y-4 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-500"></div>
+                    <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32d7?q=80&w=1932&auto=format&fit=crop" alt="Medhu Finance Professionals" class="relative z-10 w-full h-auto rounded-sm shadow-xl grayscale-[20%] group-hover:grayscale-0 transition-all duration-500">
+                    
+                    <div class="absolute -bottom-6 -left-6 bg-white p-6 shadow-2xl rounded-sm z-20 border-l-4 border-brand-gold hidden md:block">
+                        <div class="text-4xl font-bold text-brand-navy mb-1">15+</div>
+                        <div class="text-sm font-medium text-gray-500 uppercase tracking-wider">Years of Excellence</div>
+                    </div>
+                </div>
+
+                <!-- Text Content -->
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-12 h-[2px] bg-brand-gold"></div>
+                        <span class="text-brand-gold font-semibold uppercase tracking-wider text-sm">About Us</span>
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-brand-navy mb-6 leading-tight">
+                        A Legacy of Trust, Driven by <span class="text-brand-gold">Expertise.</span>
+                    </h2>
+                    <p class="text-gray-600 mb-6 text-lg leading-relaxed">
+                        At Medhu Finance, we understand that financial planning is deeply personal. Our mission is to demystify complex financial landscapes and provide clear, actionable guidance tailored to your unique aspirations.
+                    </p>
+                    <p class="text-gray-600 mb-8 text-lg leading-relaxed">
+                        Whether you are an individual seeking to secure your family's future or a corporation aiming for sustainable growth, our fiduciary approach ensures your interests always come first. We don't just manage wealth; we engineer prosperity.
+                    </p>
+                    
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-check text-brand-gold mt-1 mr-3"></i>
+                            <span class="text-gray-700 font-medium">Unbiased, Fiduciary Financial Advisory</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-check text-brand-gold mt-1 mr-3"></i>
+                            <span class="text-gray-700 font-medium">Data-Driven Investment Strategies</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-check text-brand-gold mt-1 mr-3"></i>
+                            <span class="text-gray-700 font-medium">Comprehensive Wealth Structuring</span>
+                        </li>
+                    </ul>
+
+                    <a href="#contact" class="inline-block border-b-2 border-brand-navy text-brand-navy hover:text-brand-gold hover:border-brand-gold font-semibold text-lg pb-1 transition-colors duration-300">
+                        Speak with an Advisor
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 bg-brand-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <div class="flex justify-center items-center gap-3 mb-4">
+                    <div class="w-8 h-[2px] bg-brand-gold"></div>
+                    <span class="text-brand-gold font-semibold uppercase tracking-wider text-sm">Our Offerings</span>
+                    <div class="w-8 h-[2px] bg-brand-gold"></div>
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-bold text-brand-navy mb-6">Comprehensive Financial Solutions</h2>
+                <p class="text-gray-600 text-lg">
+                    Discover our suite of institutional-grade financial services designed to protect, optimize, and exponentially grow your capital.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white p-10 border border-gray-100 rounded-sm shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
+                    <div class="w-14 h-14 bg-brand-navy/5 text-brand-navy group-hover:bg-brand-gold group-hover:text-white rounded-sm flex items-center justify-center text-2xl mb-6 transition-colors duration-300">
+                        <i class="fa-solid fa-chart-pie"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-navy mb-3">Wealth Management</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Tailored portfolio management strategies focused on risk-adjusted returns, asset allocation, and long-term capital preservation.
+                    </p>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-white p-10 border border-gray-100 rounded-sm shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
+                    <div class="w-14 h-14 bg-brand-navy/5 text-brand-navy group-hover:bg-brand-gold group-hover:text-white rounded-sm flex items-center justify-center text-2xl mb-6 transition-colors duration-300">
+                        <i class="fa-solid fa-compass"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-navy mb-3">Financial Planning</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Holistic planning covering retirement, education funds, tax optimization, and estate structuring to secure your legacy.
+                    </p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-white p-10 border border-gray-100 rounded-sm shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
+                    <div class="w-14 h-14 bg-brand-navy/5 text-brand-navy group-hover:bg-brand-gold group-hover:text-white rounded-sm flex items-center justify-center text-2xl mb-6 transition-colors duration-300">
+                        <i class="fa-solid fa-building-columns"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-navy mb-3">Corporate Advisory</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Strategic consulting for businesses including M&A advisory, capital raising, treasury management, and risk mitigation.
+                    </p>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="bg-white p-10 border border-gray-100 rounded-sm shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
+                    <div class="w-14 h-14 bg-brand-navy/5 text-brand-navy group-hover:bg-brand-gold group-hover:text-white rounded-sm flex items-center justify-center text-2xl mb-6 transition-colors duration-300">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-navy mb-3">Risk & Insurance</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Comprehensive evaluation of personal and corporate liabilities to architect robust insurance and hedging strategies.
+                    </p>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="bg-white p-10 border border-gray-100 rounded-sm shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
+                    <div class="w-14 h-14 bg-brand-navy/5 text-brand-navy group-hover:bg-brand-gold group-hover:text-white rounded-sm flex items-center justify-center text-2xl mb-6 transition-colors duration-300">
+                        <i class="fa-solid fa-scale-balanced"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-navy mb-3">Tax Structuring</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Proactive tax planning to minimize liabilities legally and optimize transaction structures for maximum efficiency.
+                    </p>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="bg-brand-navy p-10 rounded-sm shadow-sm flex flex-col justify-center items-center text-center relative overflow-hidden group">
+                    <div class="absolute inset-0 bg-brand-slate opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="relative z-10">
+                        <h3 class="text-2xl font-bold text-white mb-4">Need a Custom Strategy?</h3>
+                        <p class="text-gray-300 mb-6">Let's discuss your specific financial objectives.</p>
+                        <a href="#contact" class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-brand-gold text-brand-navy hover:scale-110 transition-transform duration-300">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section id="why-us" class="py-24 bg-brand-navy text-white relative">
+        <!-- Subtle background decoration -->
+        <div class="absolute top-0 right-0 p-32 opacity-5 pointer-events-none">
+            <svg viewBox="0 0 100 100" class="w-96 h-96 fill-current text-white"><path d="M50 0L100 50L50 100L0 50Z"></path></svg>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <div class="lg:col-span-4 flex flex-col justify-center">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-12 h-[2px] bg-brand-gold"></div>
+                        <span class="text-brand-gold font-semibold uppercase tracking-wider text-sm">Why Us</span>
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-bold mb-6">The Medhu Advantage</h2>
+                    <p class="text-gray-400 text-lg leading-relaxed mb-8">
+                        We combine institutional-level market insights with highly personalized service, ensuring a partnership built on transparency, performance, and unwavering integrity.
+                    </p>
+                </div>
+                
+                <div class="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <!-- Pillar 1 -->
+                    <div class="bg-brand-slate p-8 rounded-sm border border-white/5 hover:border-brand-gold/30 transition-colors duration-300">
+                        <i class="fa-solid fa-handshake text-3xl text-brand-gold mb-5"></i>
+                        <h3 class="text-xl font-bold mb-3">Absolute Integrity</h3>
+                        <p class="text-gray-400">Our fee structures are transparent and our advice is impartial. We operate solely as your fiduciary advocate.</p>
+                    </div>
+                    <!-- Pillar 2 -->
+                    <div class="bg-brand-slate p-8 rounded-sm border border-white/5 hover:border-brand-gold/30 transition-colors duration-300">
+                        <i class="fa-solid fa-user-tie text-3xl text-brand-gold mb-5"></i>
+                        <h3 class="text-xl font-bold mb-3">Seasoned Expertise</h3>
+                        <p class="text-gray-400">Our advisory team brings decades of combined experience navigating complex market cycles and regulatory landscapes.</p>
+                    </div>
+                    <!-- Pillar 3 -->
+                    <div class="bg-brand-slate p-8 rounded-sm border border-white/5 hover:border-brand-gold/30 transition-colors duration-300">
+                        <i class="fa-solid fa-arrow-trend-up text-3xl text-brand-gold mb-5"></i>
+                        <h3 class="text-xl font-bold mb-3">Focus on Growth</h3>
+                        <p class="text-gray-400">We don't just protect capital; we actively seek out high-conviction opportunities to compound your wealth over time.</p>
+                    </div>
+                    <!-- Pillar 4 -->
+                    <div class="bg-brand-slate p-8 rounded-sm border border-white/5 hover:border-brand-gold/30 transition-colors duration-300">
+                        <i class="fa-solid fa-lock text-3xl text-brand-gold mb-5"></i>
+                        <h3 class="text-xl font-bold mb-3">Bank-Grade Security</h3>
+                        <p class="text-gray-400">Your financial data and physical assets are protected by industry-leading security protocols and custodian partnerships.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <div class="flex justify-center items-center gap-3 mb-4">
+                    <div class="w-8 h-[2px] bg-brand-gold"></div>
+                    <span class="text-brand-gold font-semibold uppercase tracking-wider text-sm">Get In Touch</span>
+                    <div class="w-8 h-[2px] bg-brand-gold"></div>
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-bold text-brand-navy mb-6">Start Your Financial Journey</h2>
+                <p class="text-gray-600 text-lg">
+                    Schedule a confidential consultation with our advisors to discuss your financial goals and how Medhu Finance can help you achieve them.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 bg-white shadow-2xl rounded-sm overflow-hidden border border-gray-100">
+                
+                <!-- Contact Info Panel -->
+                <div class="lg:col-span-1 bg-brand-navy p-10 text-white flex flex-col justify-between relative overflow-hidden">
+                    <div class="absolute -bottom-24 -right-24 w-64 h-64 bg-brand-slate rounded-full opacity-50 blur-3xl"></div>
+                    
+                    <div class="relative z-10">
+                        <h3 class="text-2xl font-bold mb-8">Contact Information</h3>
+                        
+                        <div class="space-y-8">
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-full bg-brand-slate flex items-center justify-center flex-shrink-0 text-brand-gold">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-lg mb-1">Our Headquarters</h4>
+                                    <p class="text-gray-400 text-sm leading-relaxed">
+                                        Medhu Financial Center<br>
+                                        Level 14, Tower B, FinTech District<br>
+                                        [City, State, Zip Code]
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-full bg-brand-slate flex items-center justify-center flex-shrink-0 text-brand-gold">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-lg mb-1">Call Us Directly</h4>
+                                    <p class="text-gray-400 text-sm">
+                                        +1 (555) 123-4567<br>
+                                        <span class="text-xs text-gray-500 mt-1 block">Mon-Fri, 9am - 6pm</span>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-full bg-brand-slate flex items-center justify-center flex-shrink-0 text-brand-gold">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-lg mb-1">Email Support</h4>
+                                    <p class="text-gray-400 text-sm">
+                                        advisory@medhufinance.com<br>
+                                        info@medhufinance.com
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="lg:col-span-2 p-10 lg:p-14">
+                    <h3 class="text-2xl font-bold text-brand-navy mb-6">Send us a message</h3>
+                    
+                    <!-- Success Message Alert (Hidden by default) -->
+                    <div id="form-success" class="hidden mb-6 p-4 rounded-sm bg-green-50 border border-green-200 text-green-800 flex items-center gap-3">
+                        <i class="fa-solid fa-circle-check text-xl"></i>
+                        <div>
+                            <h4 class="font-semibold">Message Sent Successfully!</h4>
+                            <p class="text-sm">Thank you for reaching out. An advisor will contact you shortly.</p>
+                        </div>
+                    </div>
+
+                    <form id="contact-form" class="space-y-6" novalidate>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <!-- Name -->
+                            <div class="space-y-2">
+                                <label for="name" class="block text-sm font-medium text-gray-700">Full Name <span class="text-red-500">*</span></label>
+                                <input type="text" id="name" name="name" required
+                                    class="form-input w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-sm text-gray-800"
+                                    placeholder="John Doe">
+                                <p id="name-error" class="hidden text-red-500 text-xs mt-1">Please enter your name.</p>
+                            </div>
+                            
+                            <!-- Email -->
+                            <div class="space-y-2">
+                                <label for="email" class="block text-sm font-medium text-gray-700">Email Address <span class="text-red-500">*</span></label>
+                                <input type="email" id="email" name="email" required
+                                    class="form-input w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-sm text-gray-800"
+                                    placeholder="john@example.com">
+                                <p id="email-error" class="hidden text-red-500 text-xs mt-1">Please enter a valid email address.</p>
+                            </div>
+                        </div>
+
+                        <!-- Phone (Optional) -->
+                        <div class="space-y-2">
+                            <label for="phone" class="block text-sm font-medium text-gray-700">Phone Number (Optional)</label>
+                            <input type="tel" id="phone" name="phone"
+                                class="form-input w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-sm text-gray-800"
+                                placeholder="+1 (555) 000-0000">
+                        </div>
+
+                        <!-- Message -->
+                        <div class="space-y-2">
+                            <label for="message" class="block text-sm font-medium text-gray-700">How can we help you? <span class="text-red-500">*</span></label>
+                            <textarea id="message" name="message" rows="4" required
+                                class="form-input w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-sm text-gray-800 resize-none"
+                                placeholder="Describe your financial goals or questions here..."></textarea>
+                            <p id="message-error" class="hidden text-red-500 text-xs mt-1">Please provide a message.</p>
+                        </div>
+
+                        <!-- Submit -->
+                        <button type="submit" id="submit-btn" class="w-full bg-brand-navy hover:bg-brand-slate text-white font-medium py-4 px-6 rounded-sm transition-colors duration-300 flex items-center justify-center gap-2">
+                            <span>Submit Request</span>
+                            <i class="fa-solid fa-paper-plane text-sm"></i>
+                        </button>
+                        
+                        <p class="text-xs text-gray-500 text-center mt-4">
+                            By submitting this form, you agree to our privacy policy and consent to being contacted by Medhu Finance.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-navy border-t border-white/10 pt-16 pb-8 text-white mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- Brand col -->
+                <div class="col-span-1 lg:col-span-1">
+                    <a href="#" class="flex items-center gap-2 mb-6">
+                        <div class="w-8 h-8 bg-white flex items-center justify-center rounded-sm">
+                            <span class="text-brand-navy font-bold text-xl leading-none">M</span>
+                        </div>
+                        <span class="font-bold text-2xl tracking-tight text-white">Medhu Finance</span>
+                    </a>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        Empowering generations through disciplined wealth management, strategic planning, and unwavering fiduciary commitment.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-8 h-8 rounded-full bg-brand-slate flex items-center justify-center text-gray-400 hover:bg-brand-gold hover:text-white transition-all duration-300">
+                            <i class="fa-brands fa-linkedin-in text-sm"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 rounded-full bg-brand-slate flex items-center justify-center text-gray-400 hover:bg-brand-gold hover:text-white transition-all duration-300">
+                            <i class="fa-brands fa-twitter text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="text-gray-400 hover:text-brand-gold transition-colors text-sm">Home</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-brand-gold transition-colors text-sm">About Us</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-brand-gold transition-colors text-sm">Our Services</a></li>
+                        <li><a href="#why-us" class="text-gray-400 hover:text-brand-gold transition-colors text-sm">Why Choose Us</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-brand-gold transition-colors text-sm">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services Links -->
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Expertise</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#services" class="text-gray-400 hover:text-brand-gold transition-colors text-sm">Wealth Management</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-brand-gold transition-colors text-sm">Corporate Advisory</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-brand-gold transition-colors text-sm">Financial Planning</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-brand-gold transition-colors text-sm">Tax Structuring</a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal/Disclaimer -->
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Legal</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-brand-gold transition-colors text-sm">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-brand-gold transition-colors text-sm">Terms of Service</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-brand-gold transition-colors text-sm">Regulatory Disclosures</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-brand-gold transition-colors text-sm">Client Portal Help</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-brand-slate pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500">
+                <p>&copy; <span id="year"></span> Medhu Finance. All rights reserved. <br class="md:hidden">Placeholder site for demonstration purposes.</p>
+                <p>Designed with <i class="fa-solid fa-heart text-brand-gold mx-1"></i> for Financial Clarity</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

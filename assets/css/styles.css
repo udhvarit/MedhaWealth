@@ -1,0 +1,32 @@
+body {
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+.bg-hero-pattern {
+    background-color: #0B192C;
+    background-image: linear-gradient(rgba(11, 25, 44, 0.85), rgba(11, 25, 44, 0.95)), url('https://images.unsplash.com/photo-1579532537598-459ecdaf39cc?q=80&w=2070&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.hero-section {
+    min-height: 90vh;
+}
+
+.bg-about-pattern {
+    background-image: radial-gradient(#D4AF37 0.5px, transparent 0.5px);
+    background-size: 16px 16px;
+    opacity: 0.1;
+}
+
+.form-input {
+    transition: all 0.3s ease;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #D4AF37;
+    box-shadow: 0 0 0 1px #D4AF37;
+}
